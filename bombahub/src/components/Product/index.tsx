@@ -7,7 +7,7 @@ import { colors } from "@/src/styles/colors";
 export type ProductProps = {
     categoriaId: string,
     frequenciaRotacao: string,
-    id: string,
+    id?: string,
     linhaTipo: string,
     massaEspecifica: string,
     modeloTamanho: string
@@ -31,7 +31,7 @@ export function Product({data, ...rest}: Props){
 
                 <View style={s.footer}>
                     <IconPresentationFilled size={16} color={colors.red.base} />
-                    <Text style={s.pressure}>{data.vazao} litros/hora</Text> 
+                    <Text style={s.pressure}>Vazão: {data.vazao}</Text> 
                 </View>
 
                 

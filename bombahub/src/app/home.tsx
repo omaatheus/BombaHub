@@ -4,49 +4,73 @@ import { colors, fontFamily } from "@/src/styles/theme";
 
 import { useEffect, useState } from "react";
 
-import { router } from "expo-router";
-import { Loading } from "../components/Loading";
 import { Categories, CategoriesProps } from "../components/Categories";
-import { collection, getDocs } from "firebase/firestore";
+import { fetchCategoriesFromDb } from "../utils/fetchCategories";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../services/firebase";
+import { ProductProps } from "../components/Product";
 import { Catalog } from "../components/Catalog";
+
+type PropsProduct = ProductProps;
 
 export default function Home() {
   const [categories, setCategories] = useState<CategoriesProps>([]);
-  const [category, setCategory] = useState("")
+  const [category, setCategory] = useState("");
+  const [product, setProduct] = useState<PropsProduct[]>([]);
 
   async function fetchCategories() {
     try {
-      const res = await getDocs(collection(db, "categories"));
-      const categ: any = [];
-      
-        // Iterar sobre os documentos e extrair os dados
-    res.forEach((doc) => {
-        const categoryData = {
-          id: doc.id,      // ID do documento
-          name: doc.data().name,  // Campo 'name' do documento
-        };
-        
-        // Adicionar o objeto ao array
-        categ.push(categoryData);
-      });
-
-      
-      
-      setCategories(categ)
-      setCategory(categ[0].id)
+      const data = await fetchCategoriesFromDb();
+      setCategories(data);
+      setCategory(data[0]?.id || "");
     } catch (error) {
       console.log(error);
       Alert.alert("Categorias", "Não foi possível carregar as categorias.");
     }
   }
 
+  async function fetchProducts() {
+    try {
+      if (!category) {
+        return;
+      }
+
+      const bombsRef = collection(db, "bombs");
+      const bombsQuery = query(bombsRef, where("categoriaId", "==", category));
+
+      const querySnapshot = await getDocs(bombsQuery);
+
+      const bombs: ProductProps[] = querySnapshot.docs.map((doc) => {
+        const data = doc.data() as ProductProps;
+      
+        return {
+          id: doc.id,
+          ...data, 
+        };
+      });
+      
+
+      setProduct(bombs); 
+    } catch (error) {
+      console.log(error);
+      Alert.alert("Catálogo", "Não foi possível carregar o catálogo.");
+    }
+  }
+
+  
   useEffect(() => {
     fetchCategories();
   }, []);
+
+  
+  useEffect(() => {
+    fetchProducts();
+  }, [category]); 
+
   return (
     <View style={styles.container}>
-      <Categories data={categories} selected={category} onSelect={setCategory}/>
+      <Categories data={categories} selected={category} onSelect={setCategory} />
+      <Catalog data={product} />
     </View>
   );
 }
