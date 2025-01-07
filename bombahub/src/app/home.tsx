@@ -9,6 +9,7 @@ import { Loading } from "../components/Loading";
 import { Categories, CategoriesProps } from "../components/Categories";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../services/firebase";
+import { Catalog } from "../components/Catalog";
 
 export default function Home() {
   const [categories, setCategories] = useState<CategoriesProps>([]);
