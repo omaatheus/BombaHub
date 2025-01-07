@@ -10,6 +10,7 @@ import {
   Rubik_700Bold,
 } from "@expo-google-fonts/rubik";
 import { StatusBar } from "react-native";
+import { Loading } from "../components/Loading";
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({
@@ -20,7 +21,7 @@ export default function Layout() {
   });
 
   if (!fontsLoaded) {
-    return 
+    return <Loading />
   }
 
   return (
