@@ -10,6 +10,8 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../services/firebase";
 import { ProductProps } from "../components/Product";
 import { Catalog } from "../components/Catalog";
+import { Loading } from "../components/Loading";
+import React from "react";
 
 type PropsProduct = ProductProps;
 
@@ -68,10 +70,19 @@ export default function Home() {
   }, [category]); 
 
   return (
+    <>
+
+    {product ?
+
     <View style={styles.container}>
       <Categories data={categories} selected={category} onSelect={setCategory} />
+
+      
       <Catalog data={product} />
-    </View>
+      
+    </View> : <Loading />
+    }
+    </>
   );
 }
 
