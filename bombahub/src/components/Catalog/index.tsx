@@ -20,7 +20,7 @@ export function Catalog({ data }: Props) {
                 renderItem={({ item }) => (
                     <Product 
                         data={item} 
-                        onPress={() => router.push({ pathname: "/product/[id]", params: { id: item.id } })}
+                        onPress={() => router.push({ pathname: "/product/[id]", params: { id: String(item.id) } })}
                     />
                 )}
                 contentContainerStyle={s.content}

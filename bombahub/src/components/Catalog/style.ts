@@ -8,7 +8,6 @@ export const s = StyleSheet.create({
     borderColor: colors.blue.soft,
     height: "90%",
     marginTop: "27%",
-    alignItems: "center"
   },
   content: {
     gap: 12,

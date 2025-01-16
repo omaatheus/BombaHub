@@ -11,6 +11,7 @@ type Props = {
 export function Search({placeholder}: Props) {
     return (
         <View style={styles.container}>
+        <View style={styles.content}>
             <TextInput style={styles.input} placeholder={placeholder}>
 
             </TextInput>
@@ -19,6 +20,7 @@ export function Search({placeholder}: Props) {
 
                 </Button.Icon>
             </Button>
+        </View>
         </View>
     )
 }
