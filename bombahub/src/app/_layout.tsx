@@ -30,12 +30,17 @@ export default function Layout() {
         barStyle="light-content" // 'dark-content' para texto escuro
         backgroundColor={colors.gray[100]}
       />
+
       <Stack
         screenOptions={{
           headerShown: false,
           contentStyle: { backgroundColor: colors.gray[100] },
         }}
-      />
+      >
+
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+
+      </Stack>
     </GestureHandlerRootView>
   );
 }

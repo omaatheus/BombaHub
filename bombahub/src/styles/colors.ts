@@ -11,7 +11,7 @@ export const colors = {
     blue: {
       soft: "#E8F1F2",
       light: "#1B98E0",
-      base: "#006494",
+      base: "#0064FF",
       dark: "#13293D",
     },
   

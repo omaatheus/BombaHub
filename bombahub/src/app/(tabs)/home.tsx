@@ -4,13 +4,13 @@ import { colors, fontFamily } from "@/src/styles/theme";
 
 import { useEffect, useState } from "react";
 
-import { Categories, CategoriesProps } from "../components/Categories";
-import { fetchCategoriesFromDb } from "../utils/fetchCategories";
+import { Categories, CategoriesProps } from "../../components/Categories";
+import { fetchCategoriesFromDb } from "../../utils/fetchCategories";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { db } from "../services/firebase";
-import { ProductProps } from "../components/Product";
-import { Catalog } from "../components/Catalog";
-import { Loading } from "../components/Loading";
+import { db } from "@/src/services/firebase";
+import { ProductProps } from "@/src/components/Product";
+import { Catalog } from "../../components/Catalog";
+import { Loading } from "../../components/Loading";
 import React from "react";
 
 type PropsProduct = ProductProps;
@@ -24,7 +24,7 @@ export default function Home() {
     try {
       const data = await fetchCategoriesFromDb();
       setCategories(data);
-      setCategory(data[0]?.id || "");
+      setCategory(data[0].id);
     } catch (error) {
       console.log(error);
       Alert.alert("Categorias", "Não foi possível carregar as categorias.");

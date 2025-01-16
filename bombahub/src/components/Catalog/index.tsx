@@ -11,9 +11,6 @@ type Props = {
 export function Catalog({ data }: Props) {
     return (
         <View style={s.container}>
-
-        <Search placeholder="Buscar modelo" />
-
             <FlatList
                 data={data}
                 keyExtractor={(item) => item.id ?? ""}
