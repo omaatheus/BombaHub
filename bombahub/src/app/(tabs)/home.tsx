@@ -78,7 +78,7 @@ export default function Home() {
       <Categories data={categories} selected={category} onSelect={setCategory} />
 
       
-      <Catalog data={product} />
+      <Catalog placeholder="Explore o catálogo." data={product} />
       
     </View> : <Loading />
     }
@@ -88,7 +88,7 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    
     backgroundColor: colors.gray[100],
   },
 });
