@@ -61,22 +61,22 @@ export const categoriesIcons: Record<string, React.ComponentType<IconProps>> = {
   "R5tweP8HzVrUvreQVMAg": IconCloud, // PQI
   "LcLHgQxgyLrrBExHND4M": IconCode, // INI
   "mORlTYzZd4ozkQ7DSckB": IconCoffee, // INI K/O
-  "19": IconCompass, //INI-P
-  "20": IconDeviceGamepad2, //INI-S
-  "21": IconDevices, // INI-V
-  "22": IconDiamond, //INI-VR
-  "23": IconDownload, // INK
-  "24": IconEye, // IS
-  "25": Icon123,//E/EP
-  "26": IconFlag, // RA
-  "27": IconHeart, // RT
-  "28": IconHome,
-  "29": IconMusic,
-  "30": IconPalette,
-  "31": IconStar,
-  "32": IconClock,          // Exemplo de reutilização de ícone
-  "33": IconFlask2,         // Exemplo de reutilização de ícone
-  "34": IconBriefcase,      // Exemplo de reutilização de ícone
+  "R7b0dCYBV73r2BTOeaSo": IconCompass, //INI-P
+  "CTdHEEfDmH8Imx9a6B2y": IconDeviceGamepad2, //INI-S
+  "nJTj3QAZoyX0q7Z75g3J": IconDevices, // INI-V
+  "11y5o2X2R4ObMciV5HRI": IconDiamond, //INI-VR
+  "t0S6F4z4auEMBg4hydDB": IconDownload, // INK
+  "5XxDIOuQI9czCk755soI": IconEye, // IS
+  "aNJpMEEMAdefnjIAmAS8": Icon123,//E/EP
+  "fE1hQ1Hy9Cn8CRJroMLT": IconFlag, // RA
+  "PzbQjMNecDXTMx8XkgtC": IconHeart, // RT
+  "1ReaQBtfgOKvmWnMfvjU": IconHome, // TCI
+  "LTK0nEWEXD8YXCXTL2ie": IconMusic, // VTI
+  "dE9N7yNheyCRFO9wQu6n": IconPalette, // OMEGA
+  "CwUld6MkTfFI33hVKKFf": IconStar, // ISE
+  "Mygr6in9shxpYzjTiWQE": IconClock,          // INI-HT
+  "OiNNBfyowFgY59LNg8z7": IconFlask2,         // ITAP
+  "HALl8uI355O84ChpixQU": IconBriefcase,      // RAS
   "35": IconBuilding,       // Exemplo de reutilização de ícone
   "36": IconCompass,        // Exemplo de reutilização de ícone
   "37": IconCoffee,         // Exemplo de reutilização de ícone

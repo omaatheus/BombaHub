@@ -23,13 +23,21 @@ export default function Home() {
   async function fetchCategories() {
     try {
       const data = await fetchCategoriesFromDb();
-      setCategories(data);
-      setCategory(data[0].id);
+  
+
+      const sortedData = data.sort((a: { name: string }, b: { name: string }) => 
+        a.name.localeCompare(b.name)
+      );
+  
+      setCategories(sortedData);
+      setCategory(sortedData[0]?.id);
     } catch (error) {
       console.log(error);
       Alert.alert("Categorias", "Não foi possível carregar as categorias.");
     }
   }
+  
+  
 
   async function fetchProducts() {
     try {
