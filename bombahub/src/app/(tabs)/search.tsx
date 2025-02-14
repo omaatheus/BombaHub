@@ -17,8 +17,8 @@ export default function Search() {
     try {
       const res = query(
         collection(db, "bombs"),
-        where("modeloTamanho", ">=", searchText),
-        where("modeloTamanho", "<=", searchText + "\uf8ff")
+        where("model", ">=", searchText),
+        where("model", "<=", searchText + "\uf8ff")
       );
 
       const snapshot = await getDocs(res);

@@ -54,7 +54,6 @@ export default function Home() {
         const data = doc.data() as ProductProps;
       
         return {
-          id: doc.id,
           ...data, 
         };
       });

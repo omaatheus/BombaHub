@@ -34,11 +34,24 @@ export const s = StyleSheet.create({
     color: colors.gray[500],
   },
   footer: {
-    flexDirection: "row",
+    flexDirection: "column",
     gap: 7,
     marginTop: 10,
   },
-  pressure: {
+  div: {
+    flexDirection: "row",
+  },
+  retentor: {
+    fontSize: 12,
+    fontFamily: fontFamily.regular,
+    color: colors.gray[400],
+  },
+  gaxeta: {
+    fontSize: 12,
+    fontFamily: fontFamily.regular,
+    color: colors.gray[400],
+  },
+  rolamento: {
     fontSize: 12,
     fontFamily: fontFamily.regular,
     color: colors.gray[400],

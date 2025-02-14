@@ -38,11 +38,11 @@ import {
 } from "@tabler/icons-react-native";
 
 export const categoriesIcons: Record<string, React.ComponentType<IconProps>> = {
-  "HtQeU8GXz93V8rMkipLA": IconFlask2,      // Química
-  "bIvuOBXnFDgO0Wud67JU": IconDroplet,     // Saneamento
-  "ftJsGhPO8wz9nypuhI42": IconDropletCog,  // Petroquímica
-  "iVUjzjc0JFvUdadS0oqO": IconMountain,    // Mineração
-  "wcjmHAnI4D6n7mOAxUiq": IconIcons,       // Outros
+  "HtQeU8GXz93V8rMkipLA": IconFlask2,      // BCI
+  "bIvuOBXnFDgO0Wud67JU": IconDroplet,     // BEK
+  "ftJsGhPO8wz9nypuhI42": IconDropletCog,  // BEL
+  "iVUjzjc0JFvUdadS0oqO": IconMountain,    // BEW
+  "wcjmHAnI4D6n7mOAxUiq": IconIcons,       // BIE
   "jye3SPTD4De1H3Y4h1S8": IconAperture, // BIM
   "oyIGUlg9xmFXqXwpyd7t": IconIcons, // BMA
   "igJqdjjsj7b8lZL2c0pV": IconArchive, // BMI
