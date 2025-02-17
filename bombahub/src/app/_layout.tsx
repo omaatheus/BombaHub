@@ -35,10 +35,19 @@ export default function Layout() {
         screenOptions={{
           headerShown: false,
           contentStyle: { backgroundColor: colors.gray[100] },
+          gestureEnabled: false, 
         }}
       >
 
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen 
+  name="register" 
+  options={{ 
+    headerShown: false,
+    
+  }} 
+/>
+
 
       </Stack>
     </GestureHandlerRootView>

@@ -4,10 +4,9 @@ import { colors, fontFamily } from "@/src/styles/theme"
 export const s = StyleSheet.create({
   container: {
     backgroundColor: colors.gray[100],
-    borderWidth: 3,
-    borderColor: colors.blue.soft,
+
     height: "90%",
-    marginTop: "27%",
+    marginTop: "30%",
   },
   content: {
     gap: 12,

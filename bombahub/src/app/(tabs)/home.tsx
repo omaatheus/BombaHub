@@ -82,6 +82,7 @@ export default function Home() {
     {product ?
 
     <View style={styles.container}>
+      
       <Categories data={categories} selected={category} onSelect={setCategory} />
 
       

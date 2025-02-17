@@ -3,30 +3,24 @@ import { fontFamily } from "@/src/styles/font-family";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    container: {
-    alignItems: "center"
-    },
-    content: {
-        marginTop: 10,
-        height: 55,
-        borderRadius: 8,
-        width: "90%",
+    searchContainer: {
         flexDirection: "row",
-    },
-    button: {
-        width: "15%",
-        
-    },
-    input: {
-        borderWidth: 1,
-        borderRadius: 8,
-        fontSize: 14,
-        fontFamily: fontFamily.regular,
-        color: colors.gray[500],
-        borderColor: colors.blue.base,
-        backgroundColor: colors.gray[100],
-        height: 55,
-        width: "85%", // Ajusta o tamanho para caber ao lado do botão
-        paddingHorizontal: 8, // Adiciona espaçamento interno ao texto
-    },
+        alignItems: "center",
+        backgroundColor: "#EAEAEA",
+        borderRadius: 25,
+        paddingHorizontal: 10,
+        paddingVertical: 8,
+        marginVertical: 10,
+      },
+      searchInput: {
+        flex: 1,
+        fontSize: 16,
+        marginLeft: 8,
+        color: "#333",
+      },
+      filterButton: {
+        width: 40,
+        height: 40,
+        marginLeft: 8,
+      },
 });
