@@ -1,17 +1,16 @@
 import { StyleSheet } from "react-native"
 import { colors, fontFamily } from "@/src/styles/theme"
 
+
 export const s = StyleSheet.create({
   container: {
     backgroundColor: colors.gray[100],
-
-    height: "90%",
-    marginTop: "30%",
   },
   content: {
     gap: 12,
     padding: 24,
-    paddingBottom: 100,
+    paddingBottom: 410, // Adiciona espaço no final para evitar sobreposição
+    flexGrow: 1, // Permite que a FlatList cresça e ocupe espaço suficiente
   },
   indicator: {
     width: 80,
@@ -24,4 +23,4 @@ export const s = StyleSheet.create({
     fontFamily: fontFamily.regular,
     marginBottom: 16,
   },
-})
+});

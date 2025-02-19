@@ -20,7 +20,7 @@ export default function Home() {
   const [category, setCategory] = useState("");
   const [product, setProduct] = useState<PropsProduct[]>([]);
 
-  async function fetchCategories() {
+   async function fetchCategories() {
     try {
       const data = await fetchCategoriesFromDb();
   
@@ -82,9 +82,9 @@ export default function Home() {
     {product ?
 
     <View style={styles.container}>
-      
+      <View style={styles.categoriesContainer}>
       <Categories data={categories} selected={category} onSelect={setCategory} />
-
+      </View>
       
       <Catalog placeholder="Explore o catálogo." data={product} />
       
@@ -98,5 +98,12 @@ const styles = StyleSheet.create({
   container: {
     
     backgroundColor: colors.gray[100],
+  },
+  categoriesContainer: {
+    justifyContent: "flex-start",
+    flexDirection: "column",
+    paddingBottom: 16,
+    paddingHorizontal: 16,
+    marginTop: 70,
   },
 });

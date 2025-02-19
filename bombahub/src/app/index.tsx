@@ -24,11 +24,11 @@ export default function Index() {
 
       <View style={styles.buttonDiv}>
         <TouchableOpacity onPress={handleClickRegister} style={styles.registerButton} activeOpacity={0.7}>
-          <Text style={styles.registerText}>Register</Text>
+          <Text style={styles.registerText}>Registrar</Text>
           
         </TouchableOpacity>
         <Pressable onPress={handleClickLogin} style={styles.signInButton}>
-          <Text style={styles.signInText}>Sign in</Text>
+          <Text style={styles.signInText}>Login</Text>
         </Pressable>
       </View>
     </View>

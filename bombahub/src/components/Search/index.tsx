@@ -7,10 +7,11 @@ import { useState } from "react";
 type Props = {
     placeholder: string
     onSearch: (query: string) => void
+    onPress: () => void
 }
 
 
-export function SearchComponents({placeholder, onSearch}: Props) {
+export function SearchComponents({placeholder, onSearch, onPress}: Props) {
 
     const [searchText, setSearchText] = useState('');
 
@@ -30,7 +31,7 @@ export function SearchComponents({placeholder, onSearch}: Props) {
           returnKeyType="done"
           onSubmitEditing={handleSearch}
         />
-        <Button style={styles.filterButton} onPress={() => console.log("Filtro ativado")}>
+        <Button style={styles.filterButton} onPress={onPress}>
           <Button.Icon icon={IconFilter} />
         </Button>
       </View>
